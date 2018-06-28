@@ -1,0 +1,29 @@
+程序结构:
+FTP程序
+ftp_server #ftp程序服务端
+├── 主程目录
+│   ├── __init__.py
+│   ├── bin #FTP 启动程序 目录
+│   │   ├── __init__.py
+│   │   ├── main.py  # 执行程序
+│   ├── conf #配置文件（主要是目录的配置及一个获取文件名的方法）
+│   │   ├── __init__.py
+│   │   ├── setting.py
+│   ├── core #主要程序逻辑都 在这个目录 里
+│   │   ├── __init__.py
+│   │   ├── ftp_server.py    #ftp_server服务端的主要代码逻辑
+│   ├──  data  #数据文件存储
+│   │    ├── alex   #用户信息(应该是json文件)
+│   │    ├── oldboy   #用户信息(应该是json文件)
+│   │    │   ├── user #存放用户的上传及下载文件的目录
+│   │    │   │    ├──  alex  #用户的家目录
+│   │    │   │    ├──  oldboy #用户的家目录
+│   │    ├── initial_user.py   #初始化用户配置
+│   └──  logs #日志文件目录（没做）
+└──————— requirements  #程序的需求文档
+└──————— README  #程序结构描述与备注
+└──————— __init__.py
+
+ftp_client #ftp客户端
+    ftp_client.py  #ftp客户端主要逻辑
+    ShowProcess.py #打印进度条
